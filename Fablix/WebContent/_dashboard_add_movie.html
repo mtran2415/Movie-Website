@@ -1,0 +1,62 @@
+<!-- This page will be redirected from any url if you are not logged in -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Employee Dashboard</title>
+	
+	<!-- Import Navbar -->
+	<link rel="import" href="_dashboard_navbar.html">
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="background.css"/>
+</head>
+<body>
+
+<h2>Add Movie</h2>
+
+ <!--Navigation bar-->
+ <script>
+	var doc = document.querySelector('link[rel="import"]').import;
+	// Grab DOM from doc.html's document.
+	var text = doc.querySelector('.Navbar');
+	document.body.appendChild(text.cloneNode(true));
+</script> 
+
+<br>
+<label><b>Add Movie</b></label>
+<form id="add_movie_form" method="post" action="#">
+    <label><b>Movie Name</b></label>
+	<input type="text" name="movie_title" placeholder="Enter Movie Name" required>
+	<br>
+    <label><b>Release Year</b></label>
+	<input type="number" name="release_year" min="1900" max="2018" required>
+    <br>
+    <label><b>Director</b></label>
+	<input type="text" name="director" required>
+    <br>
+    <label><b>Star Name</b></label>
+	<input type="text" name="star_name" required>
+    <br>
+    <label><b>Genre</b></label>
+	<input type="text" name="genre" required>
+    <br>
+    <input type="submit" value="Add Movie">
+</form>
+
+<div id="add_movie_response"></div>
+	
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="_dashboard_add_movie.js"></script> 
+
+</body>
+</html>

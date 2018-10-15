@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+	<link rel="stylesheet" type="text/css" href="background.css"/>
+		
+	<title>Fabflix</title>
+	
+	<!-- Import Navbar -->
+	<link rel="import" href="navbar.html">
+</head>
+
+<body>
+	<!--Navigation bar-->
+	<script>
+		var doc = document.querySelector('link[rel="import"]').import;
+		// Grab DOM from doc.html's document.
+		var text = doc.querySelector('.Navbar');
+		document.body.appendChild(text.cloneNode(true));
+	</script> 
+
+	<h1>Browse</h1>
+
+	<div id = "genres" class="genres">
+	<!-- <strong>Genres</strong><br>
+		<a href="browse-results.html?genre=Action&letter=&limit=10&offset=0&header=title&sort=asc">Action</a><br>
+		<a href="browse-results.html?genre=Adult&letter=&limit=10&offset=0&header=title&sort=asc">Adult</a><br>
+		<a href="browse-results.html?genre=Adventure&letter=&limit=10&offset=0&header=title&sort=asc">Adventure</a><br>
+		<a href="browse-results.html?genre=Animation&letter=&limit=10&offset=0&header=title&sort=asc">Animation</a><br>
+		<a href="browse-results.html?genre=Biography&letter=&limit=10&offset=0&header=title&sort=asc">Biography</a><br>
+		<a href="browse-results.html?genre=Comedy&letter=&limit=10&offset=0&header=title&sort=asc">Comedy</a><br>
+		<a href="browse-results.html?genre=Crime&letter=&limit=10&offset=0&header=title&sort=asc">Crime</a><br>
+		<a href="browse-results.html?genre=Documentary&letter=&limit=10&offset=0&header=title&sort=asc">Documentary</a><br>
+		<a href="browse-results.html?genre=Drama&letter=&limit=10&offset=0&header=title&sort=asc">Drama</a><br>
+		<a href="browse-results.html?genre=Family&letter=&limit=10&offset=0&header=title&sort=asc">Family</a><br>
+		<a href="browse-results.html?genre=Fantasy&letter=&limit=10&offset=0&header=title&sort=asc">Fantasy</a><br>
+		<a href="browse-results.html?genre=History&letter=&limit=10&offset=0&header=title&sort=asc">History</a><br>
+		<a href="browse-results.html?genre=Horror&letter=&limit=10&offset=0&header=title&sort=asc">Horror</a><br>
+		<a href="browse-results.html?genre=Music&letter=&limit=10&offset=0&header=title&sort=asc">Music</a><br>
+		<a href="browse-results.html?genre=Musical&letter=&limit=10&offset=0&header=title&sort=asc">Musical</a><br>
+		<a href="browse-results.html?genre=Mystery&letter=&limit=10&offset=0&header=title&sort=asc">Mystery</a><br>
+		<a href="browse-results.html?genre=Reality-TV&letter=&limit=10&offset=0&header=title&sort=asc">Reality-TV</a><br>
+		<a href="browse-results.html?genre=Romance&letter=&limit=10&offset=0&header=title&sort=asc">Romance</a><br>
+		<a href="browse-results.html?genre=Sci-Fi&letter=&limit=10&offset=0&header=title&sort=asc">Sci-Fi</a><br>
+		<a href="browse-results.html?genre=Sport&letter=&limit=10&offset=0&header=title&sort=asc">Sport</a><br>
+		<a href="browse-results.html?genre=Thriller&letter=&limit=10&offset=0&header=title&sort=asc">Thriller</a><br>
+		<a href="browse-results.html?genre=War&letter=&limit=10&offset=0&header=title&sort=asc">War</a><br>
+		<a href="browse-results.html?genre=Western&letter=&limit=10&offset=0&header=title&sort=asc">Western</a><br> -->
+	</div>
+	
+	<br>
+	
+	<div id="titles" class="titles">
+		<strong>Movie Titles</strong><br>
+	</div>
+	
+	<script>
+		console.log("linking letters");
+		var alphanum = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+		for (var i = 0; i < alphanum.length; i++) {
+			var s = document.createElement('span');
+			var url = document.createElement('a'); 
+			url.setAttribute('href', "browse-results.html?genre=&letter=" + alphanum[i] + "&limit=10&offset=0&header=title&sort=asc");
+		    url.appendChild(document.createTextNode(alphanum[i]));
+		    
+		    var element = document.getElementById("titles");
+		    var brk = document.createElement('br'); 
+		    //element.appendChild(url);
+		    s.appendChild(url);
+		    element.appendChild(s);
+		    //element.appendChild(brk);
+		}
+	</script>
+
+	<!-- Load jQuery and Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script src="browse.js"></script>
+
+</body>
+
+</html>

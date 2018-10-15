@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Fabflix</title>
+
+	<!-- Import Navbar -->
+	<link rel="import" href="navbar.html">
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          
+    <link rel="stylesheet" type="text/css" href="background.css"/>
+    
+</head>
+
+<body>    
+    <!--Navigation bar-->
+	<script>
+		var doc = document.querySelector('link[rel="import"]').import;
+		// Grab DOM from doc.html's document.
+		var text = doc.querySelector('.Navbar');
+		document.body.appendChild(text.cloneNode(true));
+	</script> 
+    
+    <h1>Search</h1>
+    
+    
+    <form id="search_form" class="search" METHOD="GET" action="#">
+    <table>
+    	<tr>
+	    	<td>Title: </td><td><input id="title" TYPE="TEXT" name="title"></td>
+	    </tr>
+	    <tr>
+	    	<td>Year: </td> <td><input id="year" TYPE="NUMBER" name="year"></td>
+	    </tr>
+	    <tr>
+	    	<td>Director: </td> <td><input id="dir" TYPE="TEXT" name="director"></td>
+	    </tr>
+	    <tr>
+	    	<td>Star: </td> <td><input id="star" TYPE="TEXT" name="star"></td>
+	    </tr>
+	    
+	    <tr>
+		    <td>Number of Results per Page:</td>
+		    <td>
+		    <select id ="limit" name="limit">
+			  <option value="10">10</option>
+			  <option value="25">25</option>
+			  <option value="50">50</option>
+			  <option value="100">100</option>
+			</select>
+			</td>
+		</tr>
+	
+		<tr>
+	    	<td></td><td><input TYPE="SUBMIT" VALUE="Submit"></td>
+	    </tr>
+
+	</table>
+	</form>
+
+    <!-- Load jQuery and Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	
+	<script src="search.js"></script>
+
+</body>
+
+</html>

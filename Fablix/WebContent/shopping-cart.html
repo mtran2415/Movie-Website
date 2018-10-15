@@ -1,0 +1,64 @@
+<!-- This example is following frontend and backend separation.
+
+    This .html performs two steps:
+    1. Create a html template skeleton, with all the elements defined (some left empty) and named with ids.
+    2. Load index.js to populate the data into empty elements.
+    -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Import Navbar -->
+	<link rel="import" href="navbar.html">
+	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="background.css"/>
+	
+	
+    <title>Shopping Cart</title>
+</head>
+<body>
+
+<h1>Shopping Cart</h1>
+
+ <!--Navigation bar-->
+ <script>
+	var doc = document.querySelector('link[rel="import"]').import;
+	// Grab DOM from doc.html's document.
+	var text = doc.querySelector('.Navbar');
+	document.body.appendChild(text.cloneNode(true));
+</script> 
+
+
+<table id=movie_table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Director</th>
+    </tr>
+    </thead>
+    <tbody id=movie_table_body></tbody>
+</table>
+
+<form id="checkout_form" method="GET" action="#">
+    <input TYPE="SUBMIT" VALUE="Checkout">
+</form>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="shopping-cart.js"></script>
+</body>
+
+
+</html>

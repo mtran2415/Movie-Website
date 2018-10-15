@@ -1,0 +1,56 @@
+th.sort:hover{
+   color: red;
+}
+
+body {
+    background-color: #bec5e6;
+    font-family: Arial 
+}
+
+form.search {
+    width: 300px;
+    margin: 0 auto;
+}
+
+form.login_form {
+	width: 300px;
+    margin: 0 auto;
+}
+
+h1 {
+	text-align: center
+}
+
+div.genres {
+	width: 500px; 
+	margin: 0 auto;
+	text-align: center;
+}
+
+div.titles {
+	margin: 0 auto;
+	text-align: center;
+}
+
+img.anteater {
+	display: block;
+	margin: 0 auto;
+}
+
+span{
+	border-left:1px solid #38546d; 
+	border-right:1px solid #38546d; 
+    width: 10px;
+    padding:0 10px;
+}
+
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+
+
+
